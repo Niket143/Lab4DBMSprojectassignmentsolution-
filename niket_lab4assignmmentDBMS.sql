@@ -47,7 +47,7 @@ foreign key(pricing_id) references supplier_pricing (pricing_id));
 
 
 create table rating(
-rat_id int primary key auto_increment ,
+rat_id int primary key ,
 ord_id int ,
 rat_ratstars int not null ,
 foreign key(ord_id) references ordr(ord_id));
@@ -113,24 +113,23 @@ insert into ordr (ORD_ID, ORD_AMT, ORD_DATE, CUS_ID, PRICING_ID) values
  (115, 3000 	,"2021/09/16", 5, 3),
  (116, 99 	    ,"2021/09/17", 2, 14);
 
-
-Insert into rating (rat_ratstars) values (4);
-Insert into rating (rat_ratstars) values (3);
-Insert into rating (rat_ratstars) values (1);
-Insert into rating (rat_ratstars) values (2);
-Insert into rating (rat_ratstars) values (4);
-Insert into rating (rat_ratstars) values (3);
-Insert into rating (rat_ratstars) values (4);
-Insert into rating (rat_ratstars) values (4);
-Insert into rating (rat_ratstars) values (3);
-Insert into rating (rat_ratstars) values (5);
-Insert into rating (rat_ratstars) values (3);
-Insert into rating (rat_ratstars) values (4);
-Insert into rating (rat_ratstars) values (2);
-Insert into rating (rat_ratstars) values (1);
-Insert into rating (rat_ratstars) values (1);
-Insert into rating (rat_ratstars) values (0);
-
+INSERT INTO rating VALUES
+			 (1,101,4),
+			 (2,102,3),
+			 (3,103,1),
+			 (4,104,2),
+			 (5,105,4),
+			 (6,106,3),
+			 (7,107,4),
+			 (8,108,4),
+			 (9,109,3),
+			 (10,110,5),
+			 (11,111,3),
+			 (12,112,4),
+			 (13,113,2),
+			 (14,114,1),
+			 (15,115,1),
+			 (16,116,0);
 
 insert into supplier_pricing (pricing_id,pro_id,sup_id,sup_price) values (1,1,2,1500);
 insert into supplier_pricing (pricing_id,pro_id,sup_id,sup_price) values (2,3,5,30000);
